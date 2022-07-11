@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="schema" value="public"/>
+
+    <changeSet id="2022-03-15 22:30" author="Richardson Nogueira">
+
+        <preConditions onFail="MARK_RAN">
+            <tableExists  tableName="user"/>
+        </preConditions>
+
+
+        <insert schemaName="${schema}" tableName="user">
+            <column name="email" type="bigint" value="teste@api.com.br"/>
+            <column name="password" type="bigint" value="$2a$10$.1ue4RI7xv4BdlVh.KE8ReGl46p3EkR2D1K0ZpV1Ev4piObyUlhlm"/>
+            <column name="name" type="boolean" value="Usuário Teste"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/2022/03/001-CREATE_TABLE_USER.xml
+  - include:
+      file: db/changelog/2022/03/002-INSERT_USER_TEST.xml
+  - include:
+      file: db/changelog/2022/07/001-CREATE_TABLE_TEST.xml
